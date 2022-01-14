@@ -1,6 +1,7 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,16 @@ namespace Personas
             Nombre = nombre;
             Edad = edad;
             Nacionalidad = nacionalidad;
+        }
+
+        public static ObservableCollection<Persona> ObtenerListadoPersonas()
+        {
+            ObservableCollection<Persona> lista = new ObservableCollection<Persona>();
+            lista.Add(new Persona("Pau", 23, "Española"));
+            lista.Add(new Persona("Josekar", 21, "Francesa"));
+            lista.Add(new Persona("Deluxazo", 19, "Italiana"));
+
+            return lista;
         }
     }
 }

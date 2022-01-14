@@ -6,7 +6,24 @@
              xmlns:local="clr-namespace:Personas"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <ListBox ItemsSource="{Binding Path=ListaPersonas}">
+        <ListBox.ItemsPanel>
+            <ItemsPanelTemplate>
+                <StackPanel></StackPanel>
+            </ItemsPanelTemplate>
+        </ListBox.ItemsPanel>
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>
+                        <Run Text="{Binding Path=Nombre}"></Run>
+                        <Run>-</Run>
+                        <Run Text="{Binding Path=Edad}"></Run>
+                        <Run>-</Run>
+                        <Run Text="{Binding Path=Nacionalidad}"></Run>
+                    </TextBlock>
+                </StackPanel>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+    </ListBox>
 </UserControl>

@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:Personas"
         mc:Ignorable="d"
         Icon="assets/personas.ico"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Personas" Height="450" Width="800">
     <DockPanel>
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-            <Button Margin="10,10,0,0">Nueva Persona</Button>
-            <Button Margin="10,10,0,0">Listado Personas</Button>
+            <Button Margin="10,10,0,0" Command="{Binding Path=AbrirNuevaPersonaCommand}">Nueva Persona</Button>
+            <Button Margin="10,10,0,0" Command="{Binding Path=AbrirListadoPersonasCommand}">Listado Personas</Button>
         </StackPanel>
         <Border Margin="10" BorderThickness="2" BorderBrush="Black">
-            <ContentControl Content="{Binding Path=Opcion}"/>
+            <ContentControl Content="{Binding Path=Opcion}"></ContentControl>
         </Border>
     </DockPanel>
 </Window>
