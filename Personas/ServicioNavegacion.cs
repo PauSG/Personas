@@ -9,6 +9,7 @@ namespace Personas
 {
     class ServicioNavegacion
     {
+        ListadoPersonas listaPersonas = new ListadoPersonas();
         public void AbrirAñadirNacionalidad()
         {
             AñadirNacionalidad windowHija = new AñadirNacionalidad();
@@ -21,7 +22,7 @@ namespace Personas
 
         public UserControl AbrirListadoPersonas()
         {
-            return new ListadoPersonas();
+            return listaPersonas;
         }
     }
 }
