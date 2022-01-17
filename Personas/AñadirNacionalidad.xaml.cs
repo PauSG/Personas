@@ -24,5 +24,10 @@ namespace Personas
             InitializeComponent();
             this.DataContext = new AñadirNacionalidadVM();
         }
+
+        private void AceptarButton_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = true;
+        }
     }
 }

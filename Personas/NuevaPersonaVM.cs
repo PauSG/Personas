@@ -1,4 +1,5 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Microsoft.Toolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,6 +11,7 @@ namespace Personas
 {
     class NuevaPersonaVM :ObservableObject
     {
+        public ServicioNavegacion servicio;
         private ObservableCollection<string> listaNacionalidades;
 
         public ObservableCollection<string> ListaNacionalidades
@@ -18,12 +20,20 @@ namespace Personas
             set { SetProperty(ref listaNacionalidades, value); }
         }
 
+        public RelayCommand AbrirAñadirNacionalidadCommand { get; }
         public NuevaPersonaVM()
         {
+            servicio = new ServicioNavegacion();
+            AbrirAñadirNacionalidadCommand = new RelayCommand(AbrirAñadirNacionalidad);
             ListaNacionalidades = new ObservableCollection<string>();
             ListaNacionalidades.Add("Italiana");
             ListaNacionalidades.Add("Española");
             ListaNacionalidades.Add("Francesa");
+        }
+
+        private void AbrirAñadirNacionalidad()
+        {
+            servicio.AbrirAñadirNacionalidad();
         }
     }
 }

@@ -9,7 +9,11 @@ namespace Personas
 {
     class ServicioNavegacion
     {
-
+        public void AbrirAñadirNacionalidad()
+        {
+            AñadirNacionalidad windowHija = new AñadirNacionalidad();
+            windowHija.ShowDialog();
+        }
         public UserControl AbrirNuevaPersona()
         {
             return new NuevaPersona();

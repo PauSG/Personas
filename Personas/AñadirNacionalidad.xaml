@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Personas"
         mc:Ignorable="d"
-        Title="AñadirNacionalidad" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        ResizeMode="NoResize"
+        Icon="assets/añadir.ico"
+        Title="Añadir Nacionalidad" Height="100" Width="300">
+    <StackPanel>
+        <TextBlock>Nacionalidad</TextBlock>
+        <TextBox></TextBox>
+        <StackPanel Margin="10" HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button Margin="0,0,10,0" IsDefault="True" Click="AceptarButton_Click">Aceptar</Button>
+            <Button IsCancel="True">Cancelar</Button>
+        </StackPanel>
+    </StackPanel>
 </Window>

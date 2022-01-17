@@ -15,7 +15,7 @@
             <TextBlock>Nacionalidad</TextBlock>
             <StackPanel Orientation="Horizontal">
                 <ComboBox Width="150"  ItemsSource="{Binding Path=ListaNacionalidades}"></ComboBox>
-                <Button Margin="5,0" Padding="5,0">+</Button>
+                <Button Command="{Binding Path=AbrirAñadirNacionalidadCommand}" Margin="5,0" Padding="5,0">+</Button>
             </StackPanel>
             <Button Height="30" Width="100">Aceptar</Button>
         </StackPanel>
