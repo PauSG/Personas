@@ -20,10 +20,12 @@ namespace Personas
     /// </summary>
     public partial class NuevaPersona : UserControl
     {
+        NuevaPersonaVM vm;
         public NuevaPersona()
         {
             InitializeComponent();
-            this.DataContext = new NuevaPersonaVM();
+            vm = new NuevaPersonaVM();
+            this.DataContext = vm;
         }
     }
 }

@@ -84,6 +84,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Mensajes.cs" />
     <Compile Include="ServicioNavegacion.cs" />
     <Page Include="AñadirNacionalidad.xaml">
       <SubType>Designer</SubType>

@@ -19,14 +19,17 @@ namespace Personas
     /// </summary>
     public partial class AñadirNacionalidad : Window
     {
+        AñadirNacionalidadVM vm;
         public AñadirNacionalidad()
         {
             InitializeComponent();
-            this.DataContext = new AñadirNacionalidadVM();
+            vm = new AñadirNacionalidadVM();
+            this.DataContext = vm;
         }
 
         private void AceptarButton_Click(object sender, RoutedEventArgs e)
         {
+            vm.Aceptar();
             DialogResult = true;
         }
     }

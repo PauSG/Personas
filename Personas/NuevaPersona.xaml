@@ -9,15 +9,15 @@
     <DockPanel LastChildFill="False">
         <StackPanel DockPanel.Dock="Top" Margin="10,0,0,0">
             <TextBlock>Nombre</TextBlock>
-            <TextBox></TextBox>
+            <TextBox Text="{Binding Path=NuevaPersona.Nombre}"></TextBox>
             <TextBlock>Edad</TextBlock>
-            <TextBox></TextBox>
+            <TextBox Text="{Binding Path=NuevaPersona.Edad}"></TextBox>
             <TextBlock>Nacionalidad</TextBlock>
             <StackPanel Orientation="Horizontal">
-                <ComboBox Width="150"  ItemsSource="{Binding Path=ListaNacionalidades}"></ComboBox>
+                <ComboBox Width="150"  ItemsSource="{Binding Path=ListaNacionalidades}" SelectedItem="{Binding Path=NuevaPersona.Nacionalidad}"></ComboBox>
                 <Button Command="{Binding Path=AbrirAñadirNacionalidadCommand}" Margin="5,0" Padding="5,0">+</Button>
             </StackPanel>
-            <Button Height="30" Width="100">Aceptar</Button>
+            <Button Command="{Binding Path=AceptarNuevaPersonaCommand}" Height="30" Width="100">Aceptar</Button>
         </StackPanel>
     </DockPanel>
 </UserControl>

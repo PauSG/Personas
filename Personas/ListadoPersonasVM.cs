@@ -1,4 +1,5 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Microsoft.Toolkit.Mvvm.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -28,6 +29,16 @@ namespace Personas
         public ListadoPersonasVM()
         {
             ListaPersonas = Persona.ObtenerListadoPersonas();
+            WeakReferenceMessenger.Default.Register<NuevaPersonaMessage>(this, (r, m) =>
+            {
+                ListaPersonas.Add(m.Value);
+            });
+
+            WeakReferenceMessenger.Default.Register<ListadoPersonasVM, PersonaSeleccionadaMessage>(this, (r, m) =>
+            {
+                if (!m.HasReceivedResponse)
+                    m.Reply(PersonaActual);
+            });
         }
 
     }

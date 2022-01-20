@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Personas
 {
-    class Persona :ObservableObject
+    public class Persona :ObservableObject
     {
         private string nombre;
 
@@ -32,6 +32,11 @@ namespace Personas
         {
             get { return nacionalidad; }
             set { SetProperty(ref nacionalidad, value); }
+        }
+
+        public Persona()
+        {
+
         }
 
         public Persona(string nombre, int edad, string nacionalidad)

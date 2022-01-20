@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
         Icon="assets/añadir.ico"
-        Title="Añadir Nacionalidad" Height="100" Width="300">
-    <StackPanel>
+        Title="Añadir Nacionalidad" Height="120" Width="320">
+    <StackPanel Margin="10">
         <TextBlock>Nacionalidad</TextBlock>
-        <TextBox></TextBox>
+        <TextBox Text="{Binding Path=Nacionalidad}"></TextBox>
         <StackPanel Margin="10" HorizontalAlignment="Right" Orientation="Horizontal">
             <Button Margin="0,0,10,0" IsDefault="True" Click="AceptarButton_Click">Aceptar</Button>
             <Button IsCancel="True">Cancelar</Button>
