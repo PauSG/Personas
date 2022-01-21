@@ -13,5 +13,10 @@ namespace Personas
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            string claveSync = Personas.Properties.Settings.Default.claveSync;
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(claveSync);
+        }
     }
 }
